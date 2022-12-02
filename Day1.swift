@@ -41,6 +41,6 @@ final class Day1: Day {
                 partialResult[partialResult.count - 1] += intCalories
             }
             .max(count: 3)
-            .sum
+            .reduce(0, +)
     }
 }
