@@ -74,7 +74,7 @@ final class Day15: Day {
                 computeEncoder?.setComputePipelineState(pso!)
                 
                 var validSensorsForRowGroup: Set<Sensor> = []
-                (row...(row + maxThreads - 1)).forEach { individualRow in
+                (row..<(row + maxThreads)).forEach { individualRow in
                     sensors
                         .filter { abs($0.sensorY - individualRow) <= $0.distance }
                         .forEach { validSensorsForRowGroup.insert($0) }
